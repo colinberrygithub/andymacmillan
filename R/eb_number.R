@@ -10,9 +10,9 @@ library(magrittr)
 eb_number <- function(LTABC, LTCTWO, abcweight,ctwodeweight){
   
 
-eb_ds <- read.csv('census_ward.csv')
+load(file='~/andymacmillan/data/Dataset_3004_2011_1_.rda')
   
-  eb_ds <- eb_ds %>% 
+  eb_ds <- Dataset_3004_2011_1_ %>% 
     filter(eb_ds$Ward %in% c('Ballyhackamore', 'Ballymacarrett', 'Belmont', 'Bloomfield (Belfast LGD)', 'Cherryvalley', 'Island', 'Knock', 'Orangefield', 'Stormont', 'Sydenham','The Mount', 'Ballyhanwood', 'Carrowreagh', 'Cregagh', 'Downshire', 'Dundonald', 'Enler', "Gilnahirk", "Graham's Bridge", 'Lisnasharragh', 'Lower Braniel', 'Tullycarnet','Upper Braniel'))
   
   eb_ds$abcone <- eb_ds$`Approximated social grade of HRP aged 16-64 years: AB` + eb_ds$`Approximated social grade of HRP aged 16-64 years: C1`
