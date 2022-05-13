@@ -54,5 +54,3 @@ eb_ds$percentage_ward <- eb_ds$support_by_ward_raw / (eb_ds$abcone + eb_ds$ctwod
 eb_ds[3] <- NULL
 
 return(eb_ds)}
-
-devtools::document()
