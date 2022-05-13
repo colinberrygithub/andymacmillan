@@ -5,6 +5,7 @@
 #' @return eb_predictor output for UUP
 #' @export
 library(dplyr)
+library(magrittr)
 
 eb_number <- function(LTABC, LTCTWO, abcweight,ctwodeweight){
   
