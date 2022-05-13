@@ -10,7 +10,7 @@ library(magrittr)
 eb_number <- function(LTABC, LTCTWO, abcweight,ctwodeweight){
   
 
-eb_ds <- read.csv('Dataset_3004_2011_1_.csv')
+eb_ds <- read.csv('census_ward.csv')
   
   eb_ds <- eb_ds %>% 
     filter(eb_ds$Ward %in% c('Ballyhackamore', 'Ballymacarrett', 'Belmont', 'Bloomfield (Belfast LGD)', 'Cherryvalley', 'Island', 'Knock', 'Orangefield', 'Stormont', 'Sydenham','The Mount', 'Ballyhanwood', 'Carrowreagh', 'Cregagh', 'Downshire', 'Dundonald', 'Enler', "Gilnahirk", "Graham's Bridge", 'Lisnasharragh', 'Lower Braniel', 'Tullycarnet','Upper Braniel'))
