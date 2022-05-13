@@ -5,13 +5,11 @@
 #' @return eb_predictor output for UUP
 #' @export
 library(dplyr)
-devtools::document()
-getwd()
-setwd('/Users/colinberry/andymacmillan')
+
 eb_number <- function(LTABC, LTCTWO, abcweight,ctwodeweight){
 
-
-Dataset_3004_2011_1_ <- load(file = '~/andymacmillan/data/Dataset_3004_2011_1_.rda')
+  
+load("~/andymacmillan/data/Dataset_3004_2011_1_.rda")
 
 eb_ds <- Dataset_3004_2011_1_ %>% 
   filter(Dataset_3004_2011_1_$Ward %in% c('Ballyhackamore', 'Ballymacarrett', 'Belmont', 'Bloomfield (Belfast LGD)', 'Cherryvalley', 'Island', 'Knock', 'Orangefield', 'Stormont', 'Sydenham','The Mount', 'Ballyhanwood', 'Carrowreagh', 'Cregagh', 'Downshire', 'Dundonald', 'Enler', "Gilnahirk", "Graham's Bridge", 'Lisnasharragh', 'Lower Braniel', 'Tullycarnet','Upper Braniel'))
@@ -58,4 +56,3 @@ eb_ds[3] <- NULL
 return(eb_ds)}
 
 
-info <- eb_number(LTABC = 0.1, LTCTWO  = 0.12, abcweight = 1, ctwodeweight = 0.75)
