@@ -3,4 +3,3 @@
 export(eb_number)
 import(magrittr)
 import(dplyr)
-import(andymacmillan)
